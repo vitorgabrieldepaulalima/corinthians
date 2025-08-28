@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corinthians</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            height: 100vh;
+        }
+
+        td {
+            padding: 10px;
+            vertical-align: top;
+        }
+
+        button {
+            width: 80%;
+            padding: 10px;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+
+        #conteudo h2 {
+            margin-top: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        small {
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <!-- Cabeçalho -->
+        <tr height="100">
+            <td colspan="3" align="center">
+                <h1>Sport Club Corinthians Paulista</h1>
+                <img src="Corinthians_simbolo.png" alt="Escudo do Corinthians" height="80">
+            </td>
+        </tr>
+
+        <!-- Menu | Conteúdo | Links externos -->
+        <tr height="400">
+            <!-- Menu -->
+            <td width="20%" align="center">
+                <h3>Menu</h3>
+                <button onclick="mostrar('historia')">História</button><br><br>
+                <button onclick="mostrar('titulos')">Títulos</button><br><br>
+                <button onclick="mostrar('idolos')">Ídolos</button><br><br>
+            </td>
+
+            <!-- Conteúdo -->
+            <td width="60%">
+                <div id="conteudo">
+                    <h2>Bem-vindo!</h2>
+                    <p>Esse é o site sobre o Corinthians. Use o menu ao lado para navegar pelas seções.</p>
+                    <img src="torcida_do_corinthians_fazendo_festa_durante_nnol.jpg" alt="Torcida do Corinthians">
+                </div>
+            </td>
+
+            <!-- Links Externos -->
+            <td width="20%" align="center">
+                <h3>Links Externos</h3>
+                <a href="https://www.corinthians.com.br" target="_blank">Site Oficial</a><br><br>
+                <a href="https://ge.globo.com/futebol/times/corinthians/" target="_blank">Notícias GE</a><br><br>
+                <a href="https://pt.wikipedia.org/wiki/Sport_Club_Corinthians_Paulista" target="_blank">Wikipedia</a>
+            </td>
+        </tr>
+
+        <!-- Rodapé -->
+        <tr height="50">
+            <td colspan="3" align="center">
+                <small>&copy; 2025 - Site feito por bocadas</small>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        function mostrar(secao) {
+            let conteudo = document.getElementById("conteudo");
+
+            if (secao === "historia") {
+                conteudo.innerHTML = `
+                    <h2>História</h2>
+                    <p>O Corinthians foi fundado em 1º de setembro de 1910, por um grupo de operários no bairro do Bom Retiro, em São Paulo. O nome foi inspirado no time inglês "Corinthian Football Club". Desde então, o clube se tornou um dos maiores e mais populares do Brasil, com uma torcida apaixonada e conhecida como "Fiel".</p>
+                    <p>O estádio oficial do clube é a Neo Química Arena, também conhecida como Arena Corinthians, inaugurada em 2014 e palco da abertura da Copa do Mundo.</p>
+                    <img src="41bcfd9ab658ebaac1661f58080aad6b.jpg" alt="Arena Corinthians">
+                `;
+            } 
+            else if (secao === "titulos") {
+                conteudo.innerHTML = `
+                    <h2>Títulos</h2>
+                    <p>O Corinthians é um dos clubes mais vitoriosos do Brasil, com conquistas nacionais e internacionais.</p>
+                    <ul>
+                        <li><strong>Mundial de Clubes:</strong> 2000, 2012</li>
+                        <li><strong>Libertadores da América:</strong> 2012 (invicto)</li>
+                        <li><strong>Campeonato Brasileiro:</strong> 7 títulos (1990, 1998, 1999, 2005, 2011, 2015, 2017)</li>
+                        <li><strong>Copa do Brasil:</strong> 3 títulos (1995, 2002, 2009)</li>
+                        <li><strong>Paulistão:</strong> mais de 30 títulos</li>
+                    </ul>
+                    <img src="r777229_1296x729_16-9.jpg" alt="Mundial de Clubes 2012">
+                `;
+            } 
+            else if (secao === "idolos") {
+                conteudo.innerHTML = `
+                    <h2>Ídolos</h2>
+                    <p>Ao longo de sua história, o Corinthians teve grandes jogadores que marcaram época:</p>
+                    <ul>
+                        <li><strong>Sócrates:</strong> Símbolo da Democracia Corinthiana nos anos 80.</li>
+                        <li><strong>Rivellino:</strong> Um dos maiores camisas 10 da história do clube e da seleção brasileira.</li>
+                        <li><strong>Marcelinho Carioca:</strong> Conhecido como "Pé de Anjo", é o maior artilheiro da Arena Corinthians.</li>
+                        <li><strong>Neto:</strong> Ídolo nos anos 90 e atual comentarista esportivo.</li>
+                        <li><strong>Cássio:</strong> Goleiro heróico da Libertadores e Mundial de 2012.</li>
+                        <li><strong>Ronaldo Fenômeno:</strong> Apesar do pouco tempo, marcou a história com sua presença.</li>
+                    </ul>
+                    <img src="62e5c669aeb28.webp" alt="Cássio - ídolo do Corinthians">
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
